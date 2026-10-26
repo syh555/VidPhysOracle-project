@@ -27,15 +27,15 @@ export const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     { name: 'Yuhao Quan', notes: ['1', '*'] },
     { name: 'Xiaoyu Xiao', notes: ['2', '*'] },
     { name: 'Haoran Zhang', notes: ['1', '*'] },
-    { name: 'Xubo Yang', notes: ['1'] },
-    { name: 'Tao Huang', notes: ['1'] },
-    { name: 'Wei Li', notes: ['1'] },
+    { name: 'Xubo Yang', notes: ['1', '†'] },
+    { name: 'Tao Huang', notes: ['1', '†'] },
+    { name: 'Wei Li', notes: ['1', '†'] },
   ]}
   institutions={[
     { symbol: '1', text: 'Shanghai Jiao Tong University' },
     { symbol: '2', text: "Xi'an University of Electronic Science and Technology" },
   ]}
-  notes={[{ symbol: '*', text: 'Equal contribution' }]}
+  notes={[{ symbol: '*', text: 'Equal contribution' }, { symbol: '†', text: 'Corresponding authors' }]}
   links={[
     { name: 'Paper(VidPhysOracle)', url: `${base}/papers/vidphysoracle.pdf`, icon: 'ri:file-pdf-2-line' },
     { name: 'GitHub', icon: 'ri:github-fill' },
