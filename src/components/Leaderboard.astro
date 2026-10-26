@@ -1,0 +1,22 @@
+<section class="leaderboard-section" aria-labelledby="leaderboard">
+  <div class="leaderboard-heading">
+    <h2 id="leaderboard">Leaderboard</h2>
+    <a href="https://huggingface.co/spaces/VidPhysOracle/leaderboard" target="_blank" rel="noopener noreferrer">Open on Hugging Face ↗</a>
+  </div>
+  <iframe
+    src="https://vidphysoracle-leaderboard.static.hf.space"
+    title="VidPhysOracle interactive leaderboard"
+    loading="lazy"
+    width="100%"
+    height="1000"
+  ></iframe>
+</section>
+
+<style>
+  .leaderboard-section { max-width: 1280px; margin: 3rem auto 4rem; }
+  .leaderboard-heading { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .75rem; margin-bottom: 1.25rem; }
+  .leaderboard-heading h2 { margin: 0; }
+  .leaderboard-heading a { font-size: .9rem; }
+  iframe { display: block; width: 100%; height: 1000px; border: 0; border-radius: .5rem; background: white; }
+  @media (max-width: 640px) { iframe { height: 1100px; } }
+</style>

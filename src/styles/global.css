@@ -166,3 +166,84 @@ main .katex-display {
     @apply cursor-pointer;
   }
 }
+
+/* VidPhysOracle project page */
+:root {
+  --maximum-text-width: 54rem;
+  --font-noto-sans: "Helvetica Neue", Arial, sans-serif;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+body { -webkit-font-smoothing: antialiased; }
+header h1 { font-size: clamp(2rem, 4.5vw, 3.35rem); line-height: 1.16; letter-spacing: -0.035em; color: #173f65; }
+header { margin-bottom: 1.75rem !important; }
+header > div { max-width: 62rem !important; }
+main h2 { letter-spacing: -0.025em; color: #173f65; }
+main h3 { color: #173f65; }
+main figure { margin-block: 2.25rem; }
+main figure img { border-radius: 0; }
+main figcaption { max-width: 54rem; margin-inline: auto; font-size: .9rem; line-height: 1.6; color: #627080; }
+.project-tagline { text-align: center; color: #627080; font-size: 1.15rem; margin: 0 0 2.5rem; }
+.benchmark-stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; padding: 1.5rem 0; margin-bottom: 2.5rem; border-block: 1px solid #e2e8ef; }
+.benchmark-stats div { display: flex; flex-direction: column; align-items: center; gap: .4rem; text-align: center; }
+.benchmark-stats strong { font-size: 2rem; color: #173f65; letter-spacing: -.035em; }
+.benchmark-stats span { font-size: .8rem; color: #627080; }
+main table { font-variant-numeric: tabular-nums; font-size: .85rem; }
+main th { white-space: nowrap; }
+main td:first-child { min-width: 10rem; }
+main [role="tablist"] { display: flex; flex-wrap: wrap; height: auto; }
+main [role="tabpanel"] { padding-top: .8rem; }
+.adaptation-result { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem 1.5rem; width: 100%; max-width: 34rem; padding: 1.1rem 1.25rem; margin: 1.5rem auto; background: #f5f7f9; border-radius: .5rem; text-align: center; }
+.adaptation-result div { display: flex; flex-direction: column; gap: .35rem; }
+.adaptation-result strong { font-size: 2rem; line-height: 1; letter-spacing: -.04em; color: #173f65; }
+.adaptation-result span { font-size: .9rem; color: #627080; }
+.adaptation-result .result-arrow { font-size: 1.5rem; color: #173f65; }
+.adaptation-result p { flex-basis: 100%; margin: 0; color: #627080; font-size: .8rem; }
+.paper-download { display: inline-block; }
+details { margin-block: 2rem; }
+summary { cursor: pointer; color: #173f65; font-weight: 500; }
+footer { margin-top: 4rem; border-top: 1px solid #e2e8ef; }
+@media (max-width: 640px) {
+  .benchmark-stats { grid-template-columns: repeat(3, 1fr); row-gap: 1.5rem; }
+  .benchmark-stats strong { font-size: 1.65rem; }
+  .adaptation-result { gap: .75rem 1rem; padding: 1rem; }
+  .adaptation-result strong { font-size: 1.8rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.overview-figure { max-width: 1280px; width: 88%; margin-inline: auto; }
+
+/* Consistent alignment for project section headings. */
+main :is(h1, h2, h3, h4, h5, h6) {
+  text-align: center;
+}
+.leaderboard-heading {
+  flex-direction: column;
+  align-items: center !important;
+  text-align: center;
+}
+
+/* Material tabs establish the parent level above scenario selectors. */
+.material-categories > [data-tabs-list] { gap: .65rem; margin-bottom: 1.5rem; }
+.material-categories > [data-tabs-list] > button { font-size: 1.15rem; font-weight: 600; padding: .7rem 1.3rem; border-radius: .6rem; color: #173f65; background: #eef3f7; }
+.material-categories > [data-tabs-list] > button[data-state="active"] { background: #173f65; color: #fff; }
+.material-categories > [data-tabs-list] > button:hover { background: #dde8f0; }
+.material-categories > [data-tabs-list] > button[data-state="active"]:hover { background: #214e76; }
+@media(max-width:640px) { .material-categories > [data-tabs-list] > button { font-size: 1rem; padding: .6rem .9rem; } }
+
+/* Share a single sizing rule between the raw and transfer video panels. */
+main :is(.raw-gallery, .transfer-panel) {
+  width: 100%;
+  max-width: 1280px;
+  box-sizing: border-box;
+  margin: 2rem auto 3rem;
+  padding: 1.5rem;
+  border: 1px solid #e4eaf0;
+  border-radius: .85rem;
+  background: #f3f6f9;
+}
+main :is(.raw-grid, .transfer-video-grid) { gap: 1.5rem; }
+@media(max-width:640px) {
+  main :is(.raw-gallery, .transfer-panel) { padding: 1rem; }
+}
+
+.scenario-overview-figure { width: 85%; max-width: 1200px; margin-inline: auto; }

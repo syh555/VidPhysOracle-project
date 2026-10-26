@@ -1,0 +1,42 @@
+---
+import { Tabs, TabsList, TabsTrigger, TabsContent } from './starwind/tabs';
+import allScenes from '../data/raw-gallery.json';
+interface Props { material: string; }
+const { material } = Astro.props;
+const scenes = allScenes.filter(scene => scene.material === material);
+const prefix = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<section class="raw-gallery not-prose" aria-label={`${material} raw simulation videos`}>
+  <Tabs defaultValue={scenes[0].id} class="scenario-tabs">
+    <TabsList aria-label={`${material} scenarios`}>
+      {scenes.map(scene => <TabsTrigger value={scene.id}>{scene.label}</TabsTrigger>)}
+    </TabsList>
+    {scenes.map(scene => (
+      <TabsContent value={scene.id}>
+        <div class="raw-grid">
+          {scene.videos.map((video, index) => (
+            <figure>
+              <video controls muted playsinline preload="none"
+                poster={`${prefix}/${video.poster}`}
+                aria-label={`${scene.label} video ${index + 1}`}>
+                <source src={`${prefix}/${video.src}`} type="video/mp4" />
+                <a href={`${prefix}/${video.src}`}>Download this video</a>
+              </video>
+            </figure>
+          ))}
+        </div>
+      </TabsContent>
+    ))}
+  </Tabs>
+</section>
+<style>
+  .raw-gallery { max-width: 1280px; margin: 2rem auto 3rem; padding: 1.5rem; border-radius: .85rem; background: #f3f6f9; border: 1px solid #e4eaf0; }
+  .raw-gallery :global(.scenario-tabs > [data-tabs-list]) { gap: .5rem; }
+  .raw-gallery :global(.scenario-tabs > [data-tabs-list] > button) { font-size: .95rem; border-radius: .45rem; color: #53677b; background: transparent; padding: .45rem .9rem; }
+  .raw-gallery :global(.scenario-tabs > [data-tabs-list] > button[data-state="active"]) { background: #dceaf5; color: #173f65; }
+  .raw-gallery :global(.scenario-tabs > [data-tabs-list] > button:hover) { background: #e6eef5; }
+  .raw-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+  .raw-grid figure { margin: 1rem 0 0; min-width: 0; }
+  video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #111827; border-radius: .5rem; }
+  @media(max-width:640px) { .raw-gallery { padding: 1rem; } .raw-grid { grid-template-columns: 1fr; } }
+</style>

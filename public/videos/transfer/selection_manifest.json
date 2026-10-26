@@ -1,0 +1,86 @@
+[
+  {
+    "scene": "rigid-dominoes",
+    "source": "rigid/rigid-dominoes/dominoes_0000_appearance_00.mp4",
+    "selected_copy": "rigid-dominoes/dominoes_0000_appearance_00.mp4",
+    "reason": "浅色双骨牌，倒下过程清楚，形状和背景较稳定。"
+  },
+  {
+    "scene": "rigid-dominoes",
+    "source": "rigid/rigid-dominoes/dominoes_0119_appearance_05.mp4",
+    "selected_copy": "rigid-dominoes/dominoes_0119_appearance_05.mp4",
+    "reason": "红、绿、浅黄色三块骨牌依次倒下；逐帧复核全部 48 帧，颜色与材质较一致，落稳过程清楚。"
+  },
+  {
+    "scene": "rigid-falling_objects",
+    "source": "rigid/rigid-falling_objects/falling_objects_0098_appearance_00.mp4",
+    "selected_copy": "rigid-falling_objects/falling_objects_0098_appearance_00.mp4",
+    "reason": "深蓝色锥体落在暗红色底座上并停稳；逐帧复核全部 48 帧，主体颜色和材质较稳定，接触过程清楚。"
+  },
+  {
+    "scene": "rigid-falling_objects",
+    "source": "rigid/rigid-falling_objects/falling_objects_0115_appearance_04.mp4",
+    "selected_copy": "rigid-falling_objects/falling_objects_0115_appearance_04.mp4",
+    "reason": "红色球体与锥体落下后失稳散开，配色统一，动作较完整。"
+  },
+  {
+    "scene": "rigid-rolling_objects",
+    "source": "rigid/rigid-rolling_objects/rolling_objects_0037_appearance_01.mp4",
+    "selected_copy": "rigid-rolling_objects/rolling_objects_0037_appearance_01.mp4",
+    "reason": "琥珀色物体沿斜坡下行，接近浅蓝物体后停稳，主体清楚。"
+  },
+  {
+    "scene": "rigid-rolling_objects",
+    "source": "rigid/rigid-rolling_objects/rolling_objects_0041_appearance_02.mp4",
+    "selected_copy": "rigid-rolling_objects/rolling_objects_0041_appearance_02.mp4",
+    "reason": "深色球体沿斜坡滚下，与浅色圆柱接触，运动路径清楚。"
+  },
+  {
+    "scene": "soft-falling_objects_on_soft_pad",
+    "source": "soft/soft-falling_objects_on_soft_pad/falling_objects_on_soft_pad_0029_appearance_07.mp4",
+    "selected_copy": "soft-falling_objects_on_soft_pad/falling_objects_on_soft_pad_0029_appearance_07.mp4",
+    "reason": "球、方块和锥体落在白色软垫上，球体随后滚离，动作可辨认。"
+  },
+  {
+    "scene": "soft-falling_objects_on_soft_pad",
+    "source": "soft/soft-falling_objects_on_soft_pad/falling_objects_on_soft_pad_0107_appearance_02.mp4",
+    "selected_copy": "soft-falling_objects_on_soft_pad/falling_objects_on_soft_pad_0107_appearance_02.mp4",
+    "reason": "棕色方块与蓝色球落在橙色软垫上，构图简洁，主体保持清楚。"
+  },
+  {
+    "scene": "soft-gravity_draping_flag",
+    "source": "soft/soft-gravity_draping_flag/gravity_draping_flag_0033_black_disc.mp4",
+    "selected_copy": "soft-gravity_draping_flag/gravity_draping_flag_0033_black_disc.mp4",
+    "reason": "白底黑圆旗由展开逐渐下垂，旗杆稳定，图案随折叠变化。"
+  },
+  {
+    "scene": "soft-gravity_draping_flag",
+    "source": "soft/soft-gravity_draping_flag/gravity_draping_flag_0123_crimson_band.mp4",
+    "selected_copy": "soft-gravity_draping_flag/gravity_draping_flag_0123_crimson_band.mp4",
+    "reason": "蓝底红条纹旗逐渐下垂，色彩清楚，布面轮廓和背景较稳定。"
+  },
+  {
+    "scene": "soft-gravity_tightening_soft_rope",
+    "source": "soft/soft-gravity_tightening_soft_rope/gravity_tightening_soft_rope_0041_appearance_02.mp4",
+    "selected_copy": "soft-gravity_tightening_soft_rope/gravity_tightening_soft_rope_0041_appearance_02.mp4",
+    "reason": "红绳与棕色重物，绳形随摆动变化，连接关系较清楚。"
+  },
+  {
+    "scene": "soft-gravity_tightening_soft_rope",
+    "source": "soft/soft-gravity_tightening_soft_rope/gravity_tightening_soft_rope_0086_appearance_05.mp4",
+    "selected_copy": "soft-gravity_tightening_soft_rope/gravity_tightening_soft_rope_0086_appearance_05.mp4",
+    "reason": "绿绳与深色球体，摆动轨迹清楚，背景简洁，主体对比明显。"
+  },
+  {
+    "scene": "fluid-draining_tank",
+    "source": "fluid/fluid-draining_tank/draining_tank_0010_appearance_02.mp4",
+    "selected_copy": "fluid-draining_tank/draining_tank_0010_appearance_02.mp4",
+    "reason": "灰背景方形玻璃容器，出水弧线和容器边缘较稳定。"
+  },
+  {
+    "scene": "fluid-draining_tank",
+    "source": "fluid/fluid-draining_tank/draining_tank_0013_appearance_05.mp4",
+    "selected_copy": "fluid-draining_tank/draining_tank_0013_appearance_05.mp4",
+    "reason": "暗背景圆柱玻璃容器，水流对比明显，出水位置较稳定。"
+  }
+]

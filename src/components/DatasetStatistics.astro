@@ -1,0 +1,37 @@
+---
+const groups = [
+  { material: 'Rigid bodies', scenarios: [['Falling objects', 128, 1024], ['Rolling objects', 128, 1024], ['Dominoes', 128, 1024]] },
+  { material: 'Soft bodies', scenarios: [['Falling objects on soft pad', 128, 1024], ['Gravity-draping flag', 128, 896], ['Gravity-tightening rope', 128, 1024]] },
+  { material: 'Liquids', scenarios: [['Rigid objects in water tank', 32, 0], ['Draining tank', 32, 256], ['U connector', 32, 0]] },
+  { material: 'Gases', scenarios: [['Smoke stack', 32, 0], ['Impact smoke dispersion', 32, 0], ['Flame heating', 32, 0]] },
+];
+const format = (n: string | number) => typeof n === 'number' ? n.toLocaleString('en-US') : n;
+---
+<div class="dataset-statistics not-prose">
+  <table aria-label="Raw and appearance-transferred video counts per scenario, from manuscript Table 7">
+    <thead><tr><th scope="col">Material</th><th scope="col">Scenario</th><th scope="col">Raw videos</th><th scope="col">Transfer videos</th></tr></thead>
+    {groups.map(group => (
+      <tbody>
+        {group.scenarios.map(([name, raw, transfer], index) => (
+          <tr>
+            {index === 0 && <th scope="rowgroup" rowspan={group.scenarios.length}>{group.material}</th>}
+            <th scope="row">{name}</th><td>{format(raw)}</td><td>{format(transfer)}</td>
+          </tr>
+        ))}
+      </tbody>
+    ))}
+    <tfoot><tr><th colspan="2" scope="row">Total</th><td>960</td><td>6,272</td></tr></tfoot>
+  </table>
+</div>
+<style>
+  .dataset-statistics { margin: 2rem auto; }
+  table { width: 100%; border-collapse: collapse; font-size: .9rem; line-height: 1.5; }
+  th, td { padding: .5rem .75rem; border-bottom: 1px solid #e4eaf0; }
+  thead th { color: #173f65; background: #f3f6f9; font-weight: 600; }
+  th { text-align: left; font-weight: 400; }
+  th[scope="rowgroup"] { color: #173f65; vertical-align: top; padding-top: .65rem; font-weight: 500; }
+  td, thead th:nth-last-child(-n+2) { text-align: right; font-variant-numeric: tabular-nums; }
+  tbody + tbody tr:first-child > * { border-top: 1px solid #cbd5df; }
+  tfoot th, tfoot td { font-weight: 600; color: #173f65; border-top: 2px solid #cbd5df; }
+  @media(max-width:640px) { table { font-size: .75rem; } th, td { padding: .45rem .3rem; } }
+</style>

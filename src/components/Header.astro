@@ -14,9 +14,10 @@ type Note = {
 };
 
 type Link = {
-  url: string;
+  url?: string;
   name: string;
   icon?: string;
+  image?: string;
 };
 
 interface Props {
@@ -24,10 +25,11 @@ interface Props {
   authors: Author[];
   conference?: string;
   notes?: Note[];
+  institutions?: Note[];
   links?: Link[];
 }
 
-const { title, authors, conference, notes, links } = Astro.props;
+const { title, authors, conference, notes, institutions, links } = Astro.props;
 
 const hasBackground = Astro.slots.has("background");
 ---
@@ -56,58 +58,57 @@ const hasBackground = Astro.slots.has("background");
     ]}
   >
     <h1 class="my-0 text-5xl font-medium">{title}</h1>
-    <div class="flex flex-row flex-wrap justify-center gap-x-8 gap-y-4">
-      {
-        authors.map((author) => (
-          <div class="flex flex-col items-center text-center">
-            <div class="flex flex-row text-xl">
-              {author.url ? (
-                <a class:list={[hasBackground && "not-prose text-blue-200 hover:text-blue-100 underline decoration-dashed underline-offset-4 hover:decoration-solid"]} href={author.url}>{author.name}</a>
-              ) : (
-                author.name
-              )}
-              {author.notes && (
-                <sup class="text-xl">
-                  {author.notes.map(
-                    (note, index, array) =>
-                      note + (index < array.length - 1 ? "," : ""),
-                  )}
-                </sup>
-              )}
-            </div>
-            {author.institution && <div>{author.institution}</div>}
-          </div>
-        ))
-      }
+    <div class="author-block">
+      <div class="author-list">
+        {authors.map((author, index) => (
+          <span class="author-entry">
+            <span>{author.name}</span>
+            {author.notes && <sup>{author.notes.join('')}</sup>}
+            {index < authors.length - 1 && <span class="author-comma">,</span>}
+          </span>
+        ))}
+      </div>
+      {notes && (
+        <div class="author-notes">
+          ({notes.map((note, index) => (
+            <span>{index > 0 && ', '}<span>{note.symbol}</span> {note.text.toLowerCase()}</span>
+          ))})
+        </div>
+      )}
+      {institutions && (
+        <div class="author-institutions">
+          {institutions.map((institution) => (
+            <span><sup>{institution.symbol}</sup> {institution.text}</span>
+          ))}
+        </div>
+      )}
+      {authors.some(author => author.institution) && !institutions && (
+        <div class="author-institutions">
+          {[...new Set(authors.map(author => author.institution).filter(Boolean))].map(institution => <span>{institution}</span>)}
+        </div>
+      )}
     </div>
     {conference && <div>{conference}</div>}
-    {
-      notes && (
-        <div class="text-center text-sm">
-          {
-            // prettier-ignore
-            notes.map((note, index, array) => (
-              <span>
-                <sup>{note.symbol}</sup>{note.text}{index < array.length - 1 ? "," : ""}
-              </span>
-            ))
-          }
-        </div>
-      )
-    }
     {
       links && (
         <div class="not-prose flex flex-row flex-wrap justify-center gap-2">
           {links.map((link) => (
-            <a
+            link.url ? <a
               href={link.url}
               class:list={["flex flex-row items-center gap-2 rounded-full px-5 py-2 text-lg hover:no-underline",
                 hasBackground ? "bg-white hover:bg-zinc-200 text-zinc-800 text-shadow-none shadow-[0_0_8px_rgba(0,0,0,0.6)]" : "bg-zinc-800 text-white hover:bg-black dark:text-zinc-900 dark:hover:bg-zinc-50 dark:bg-zinc-200"
               ]}
             >
-              {link.icon && <Icon name={link.icon} />}
+              {link.image ? <img src={link.image} alt="" width="22" height="22" class="m-0 h-[22px] w-[22px]" /> : link.icon && <Icon name={link.icon} />}
               <span>{link.name}</span>
-            </a>
+            </a> : <span
+              aria-disabled="true"
+              title="Link not available yet"
+              class="flex flex-row items-center gap-2 rounded-full bg-zinc-200 px-5 py-2 text-lg text-zinc-500 cursor-default"
+            >
+              {link.image ? <img src={link.image} alt="" width="22" height="22" class="m-0 h-[22px] w-[22px]" /> : link.icon && <Icon name={link.icon} />}
+              <span>{link.name}</span>
+            </span>
           ))}
         </div>
       )
@@ -116,6 +117,15 @@ const hasBackground = Astro.slots.has("background");
 </header>
 
 <style>
+  .author-block { display: flex; flex-direction: column; align-items: center; gap: .65rem; width: 100%; }
+  .author-list { display: flex; flex-wrap: wrap; justify-content: center; column-gap: .45em; row-gap: .35em; font-size: 1.35rem; line-height: 1.6; color: inherit; }
+  .author-entry { display: inline-block; white-space: nowrap; }
+  .author-entry sup, .author-institutions sup { position: relative; top: -.4em; vertical-align: baseline; font-size: .7em; line-height: 0; }
+  .author-comma { margin-left: .08em; }
+  .author-notes { font-size: 1rem; color: #555; }
+  .author-institutions { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1.5rem; font-size: 1.05rem; line-height: 1.6; color: #555; }
+  @media (max-width: 640px) { .author-list { font-size: 1.1rem; } .author-institutions { font-size: .95rem; } }
+
   /* Make the slotted cover (Picture/Video, or a plain <img>/<video>) fill the
      header, overriding those components' figure styling. Scoped to `.cover`.
      Kept as scoped CSS because expressing it with Tailwind would require

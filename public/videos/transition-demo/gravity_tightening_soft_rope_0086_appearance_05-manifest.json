@@ -1,0 +1,18 @@
+{
+  "raw_source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/gravity_tightening_soft_rope_0086/render.mp4",
+  "transfer_source": "/Users/suyihan/Documents/ChatGPT/world model bench/project-page/public/videos/transfer/soft-gravity_tightening_soft_rope/gravity_tightening_soft_rope_0086_appearance_05.mp4",
+  "raw_frames_zero_based": [
+    0,
+    9
+  ],
+  "transfer_frames_zero_based": [
+    10,
+    47
+  ],
+  "fps": 24,
+  "frame_count": 48,
+  "switch_time_seconds": 0.4166666666666667,
+  "width": 1280,
+  "height": 704,
+  "spatial_processing": "Raw resized to transfer dimensions; no motion interpolation, time warping, or crossfade."
+}

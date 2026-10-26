@@ -1,0 +1,278 @@
+[
+  {
+    "id": "rigid-falling_objects",
+    "label": "Falling objects",
+    "material": "Rigid bodies",
+    "videos": [
+      {
+        "src": "videos/raw/rigid-falling_objects/falling_objects_0098.mp4",
+        "poster": "videos/raw/rigid-falling_objects/falling_objects_0098.jpg",
+        "sample": "falling_objects_0098",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/falling_objects_0098/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      },
+      {
+        "src": "videos/raw/rigid-falling_objects/falling_objects_0115.mp4",
+        "poster": "videos/raw/rigid-falling_objects/falling_objects_0115.jpg",
+        "sample": "falling_objects_0115",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/falling_objects_0115/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      }
+    ]
+  },
+  {
+    "id": "rigid-rolling_objects",
+    "label": "Rolling objects",
+    "material": "Rigid bodies",
+    "videos": [
+      {
+        "src": "videos/raw/rigid-rolling_objects/rolling_objects_0037.mp4",
+        "poster": "videos/raw/rigid-rolling_objects/rolling_objects_0037.jpg",
+        "sample": "rolling_objects_0037",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/rolling_objects_0037/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      },
+      {
+        "src": "videos/raw/rigid-rolling_objects/rolling_objects_0041.mp4",
+        "poster": "videos/raw/rigid-rolling_objects/rolling_objects_0041.jpg",
+        "sample": "rolling_objects_0041",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/rolling_objects_0041/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      }
+    ]
+  },
+  {
+    "id": "rigid-dominoes",
+    "label": "Dominoes",
+    "material": "Rigid bodies",
+    "videos": [
+      {
+        "src": "videos/raw/rigid-dominoes/dominoes_0000.mp4",
+        "poster": "videos/raw/rigid-dominoes/dominoes_0000.jpg",
+        "sample": "dominoes_0000",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/dominoes_0000/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      },
+      {
+        "src": "videos/raw/rigid-dominoes/dominoes_0119.mp4",
+        "poster": "videos/raw/rigid-dominoes/dominoes_0119.jpg",
+        "sample": "dominoes_0119",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/dominoes_0119/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      }
+    ]
+  },
+  {
+    "id": "soft-falling_objects_on_soft_pad",
+    "label": "Soft pad",
+    "material": "Soft bodies",
+    "videos": [
+      {
+        "src": "videos/raw/soft-falling_objects_on_soft_pad/falling_objects_on_soft_pad_0029.mp4",
+        "poster": "videos/raw/soft-falling_objects_on_soft_pad/falling_objects_on_soft_pad_0029.jpg",
+        "sample": "falling_objects_on_soft_pad_0029",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/falling_objects_on_soft_pad_0029/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      },
+      {
+        "src": "videos/raw/soft-falling_objects_on_soft_pad/falling_objects_on_soft_pad_0107.mp4",
+        "poster": "videos/raw/soft-falling_objects_on_soft_pad/falling_objects_on_soft_pad_0107.jpg",
+        "sample": "falling_objects_on_soft_pad_0107",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/falling_objects_on_soft_pad_0107/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      }
+    ]
+  },
+  {
+    "id": "soft-gravity_draping_flag",
+    "label": "Cloth",
+    "material": "Soft bodies",
+    "videos": [
+      {
+        "src": "videos/raw/soft-gravity_draping_flag/gravity_draping_flag_0033.mp4",
+        "poster": "videos/raw/soft-gravity_draping_flag/gravity_draping_flag_0033.jpg",
+        "sample": "gravity_draping_flag_0033",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/gravity_draping_flag_0033/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      },
+      {
+        "src": "videos/raw/soft-gravity_draping_flag/gravity_draping_flag_0123.mp4",
+        "poster": "videos/raw/soft-gravity_draping_flag/gravity_draping_flag_0123.jpg",
+        "sample": "gravity_draping_flag_0123",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/gravity_draping_flag_0123/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      }
+    ]
+  },
+  {
+    "id": "soft-gravity_tightening_soft_rope",
+    "label": "Rope",
+    "material": "Soft bodies",
+    "videos": [
+      {
+        "src": "videos/raw/soft-gravity_tightening_soft_rope/gravity_tightening_soft_rope_0041.mp4",
+        "poster": "videos/raw/soft-gravity_tightening_soft_rope/gravity_tightening_soft_rope_0041.jpg",
+        "sample": "gravity_tightening_soft_rope_0041",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/gravity_tightening_soft_rope_0041/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      },
+      {
+        "src": "videos/raw/soft-gravity_tightening_soft_rope/gravity_tightening_soft_rope_0086.mp4",
+        "poster": "videos/raw/soft-gravity_tightening_soft_rope/gravity_tightening_soft_rope_0086.jpg",
+        "sample": "gravity_tightening_soft_rope_0086",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/gravity_tightening_soft_rope_0086/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      }
+    ]
+  },
+  {
+    "id": "fluid-rigid_objects_in_water_tank",
+    "label": "Water tank",
+    "material": "Liquids",
+    "videos": [
+      {
+        "src": "videos/raw/fluid-rigid_objects_in_water_tank/rigid_objects_in_water_tank_0012.mp4",
+        "poster": "videos/raw/fluid-rigid_objects_in_water_tank/rigid_objects_in_water_tank_0012.jpg",
+        "sample": "rigid_objects_in_water_tank_0012",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/rigid_objects_in_water_tank_0012/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      },
+      {
+        "src": "videos/raw/fluid-rigid_objects_in_water_tank/rigid_objects_in_water_tank_0030.mp4",
+        "poster": "videos/raw/fluid-rigid_objects_in_water_tank/rigid_objects_in_water_tank_0030.jpg",
+        "sample": "rigid_objects_in_water_tank_0030",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/rigid_objects_in_water_tank_0030/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      }
+    ]
+  },
+  {
+    "id": "fluid-draining_tank",
+    "label": "Draining tank",
+    "material": "Liquids",
+    "videos": [
+      {
+        "src": "videos/raw/fluid-draining_tank/draining_tank_0010.mp4",
+        "poster": "videos/raw/fluid-draining_tank/draining_tank_0010.jpg",
+        "sample": "draining_tank_0010",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/draining_tank_0010/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      },
+      {
+        "src": "videos/raw/fluid-draining_tank/draining_tank_0013.mp4",
+        "poster": "videos/raw/fluid-draining_tank/draining_tank_0013.jpg",
+        "sample": "draining_tank_0013",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/draining_tank_0013/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      }
+    ]
+  },
+  {
+    "id": "fluid-u_connector",
+    "label": "U connector",
+    "material": "Liquids",
+    "videos": [
+      {
+        "src": "videos/raw/fluid-u_connector/u_connector_0012.mp4",
+        "poster": "videos/raw/fluid-u_connector/u_connector_0012.jpg",
+        "sample": "u_connector_0012",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/u_connector_0012/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      },
+      {
+        "src": "videos/raw/fluid-u_connector/u_connector_0031.mp4",
+        "poster": "videos/raw/fluid-u_connector/u_connector_0031.jpg",
+        "sample": "u_connector_0031",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/u_connector_0031/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      }
+    ]
+  },
+  {
+    "id": "gas-gas_smoke_stack",
+    "label": "Smoke stack",
+    "material": "Gases",
+    "videos": [
+      {
+        "src": "videos/raw/gas-gas_smoke_stack/gas_smoke_stack_0012.mp4",
+        "poster": "videos/raw/gas-gas_smoke_stack/gas_smoke_stack_0012.jpg",
+        "sample": "gas_smoke_stack_0012",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/gas_smoke_stack_0012/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      },
+      {
+        "src": "videos/raw/gas-gas_smoke_stack/gas_smoke_stack_0031.mp4",
+        "poster": "videos/raw/gas-gas_smoke_stack/gas_smoke_stack_0031.jpg",
+        "sample": "gas_smoke_stack_0031",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/gas_smoke_stack_0031/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      }
+    ]
+  },
+  {
+    "id": "gas-impact_smoke_dispersion",
+    "label": "Impact smoke",
+    "material": "Gases",
+    "videos": [
+      {
+        "src": "videos/raw/gas-impact_smoke_dispersion/impact_smoke_dispersion_0012.mp4",
+        "poster": "videos/raw/gas-impact_smoke_dispersion/impact_smoke_dispersion_0012.jpg",
+        "sample": "impact_smoke_dispersion_0012",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/impact_smoke_dispersion_0012/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      },
+      {
+        "src": "videos/raw/gas-impact_smoke_dispersion/impact_smoke_dispersion_0031.mp4",
+        "poster": "videos/raw/gas-impact_smoke_dispersion/impact_smoke_dispersion_0031.jpg",
+        "sample": "impact_smoke_dispersion_0031",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/part_of_raw/impact_smoke_dispersion_0031/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      }
+    ]
+  },
+  {
+    "id": "gas-gas_flame_heating",
+    "label": "Flame heating",
+    "material": "Gases",
+    "videos": [
+      {
+        "src": "videos/raw/gas-gas_flame_heating/gas_flame_heating_0000.mp4",
+        "poster": "videos/raw/gas-gas_flame_heating/gas_flame_heating_0000.jpg",
+        "sample": "gas_flame_heating_0000",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/Supplementary/Raw/gas-gas_flame_heating/gas_flame_heating_0000/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      },
+      {
+        "src": "videos/raw/gas-gas_flame_heating/gas_flame_heating_0001.mp4",
+        "poster": "videos/raw/gas-gas_flame_heating/gas_flame_heating_0001.jpg",
+        "sample": "gas_flame_heating_0001",
+        "source": "/Users/suyihan/personal_project/worldmodelbench/Supplementary/Raw/gas-gas_flame_heating/gas_flame_heating_0001/render.mp4",
+        "frames": 48,
+        "fps": 24.0
+      }
+    ]
+  }
+]

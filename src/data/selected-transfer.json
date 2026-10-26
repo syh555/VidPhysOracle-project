@@ -1,0 +1,114 @@
+[
+  {
+    "id": "rigid-dominoes",
+    "label": "Dominoes",
+    "videos": [
+      {
+        "src": "videos/transfer/rigid-dominoes/dominoes_0000_appearance_00.mp4",
+        "poster": "videos/transfer/rigid-dominoes/dominoes_0000_appearance_00.jpg",
+        "filename": "dominoes_0000_appearance_00.mp4"
+      },
+      {
+        "src": "videos/transfer/rigid-dominoes/dominoes_0119_appearance_05.mp4",
+        "poster": "videos/transfer/rigid-dominoes/dominoes_0119_appearance_05.jpg",
+        "filename": "dominoes_0119_appearance_05.mp4"
+      }
+    ]
+  },
+  {
+    "id": "rigid-falling_objects",
+    "label": "Falling objects",
+    "videos": [
+      {
+        "src": "videos/transfer/rigid-falling_objects/falling_objects_0098_appearance_00.mp4",
+        "poster": "videos/transfer/rigid-falling_objects/falling_objects_0098_appearance_00.jpg",
+        "filename": "falling_objects_0098_appearance_00.mp4"
+      },
+      {
+        "src": "videos/transfer/rigid-falling_objects/falling_objects_0115_appearance_04.mp4",
+        "poster": "videos/transfer/rigid-falling_objects/falling_objects_0115_appearance_04.jpg",
+        "filename": "falling_objects_0115_appearance_04.mp4"
+      }
+    ]
+  },
+  {
+    "id": "rigid-rolling_objects",
+    "label": "Rolling objects",
+    "videos": [
+      {
+        "src": "videos/transfer/rigid-rolling_objects/rolling_objects_0037_appearance_01.mp4",
+        "poster": "videos/transfer/rigid-rolling_objects/rolling_objects_0037_appearance_01.jpg",
+        "filename": "rolling_objects_0037_appearance_01.mp4"
+      },
+      {
+        "src": "videos/transfer/rigid-rolling_objects/rolling_objects_0041_appearance_02.mp4",
+        "poster": "videos/transfer/rigid-rolling_objects/rolling_objects_0041_appearance_02.jpg",
+        "filename": "rolling_objects_0041_appearance_02.mp4"
+      }
+    ]
+  },
+  {
+    "id": "soft-falling_objects_on_soft_pad",
+    "label": "Soft pad",
+    "videos": [
+      {
+        "src": "videos/transfer/soft-falling_objects_on_soft_pad/falling_objects_on_soft_pad_0029_appearance_07.mp4",
+        "poster": "videos/transfer/soft-falling_objects_on_soft_pad/falling_objects_on_soft_pad_0029_appearance_07.jpg",
+        "filename": "falling_objects_on_soft_pad_0029_appearance_07.mp4"
+      },
+      {
+        "src": "videos/transfer/soft-falling_objects_on_soft_pad/falling_objects_on_soft_pad_0107_appearance_02.mp4",
+        "poster": "videos/transfer/soft-falling_objects_on_soft_pad/falling_objects_on_soft_pad_0107_appearance_02.jpg",
+        "filename": "falling_objects_on_soft_pad_0107_appearance_02.mp4"
+      }
+    ]
+  },
+  {
+    "id": "soft-gravity_draping_flag",
+    "label": "Cloth",
+    "videos": [
+      {
+        "src": "videos/transfer/soft-gravity_draping_flag/gravity_draping_flag_0033_black_disc.mp4",
+        "poster": "videos/transfer/soft-gravity_draping_flag/gravity_draping_flag_0033_black_disc.jpg",
+        "filename": "gravity_draping_flag_0033_black_disc.mp4"
+      },
+      {
+        "src": "videos/transfer/soft-gravity_draping_flag/gravity_draping_flag_0123_crimson_band.mp4",
+        "poster": "videos/transfer/soft-gravity_draping_flag/gravity_draping_flag_0123_crimson_band.jpg",
+        "filename": "gravity_draping_flag_0123_crimson_band.mp4"
+      }
+    ]
+  },
+  {
+    "id": "soft-gravity_tightening_soft_rope",
+    "label": "Rope",
+    "videos": [
+      {
+        "src": "videos/transfer/soft-gravity_tightening_soft_rope/gravity_tightening_soft_rope_0041_appearance_02.mp4",
+        "poster": "videos/transfer/soft-gravity_tightening_soft_rope/gravity_tightening_soft_rope_0041_appearance_02.jpg",
+        "filename": "gravity_tightening_soft_rope_0041_appearance_02.mp4"
+      },
+      {
+        "src": "videos/transfer/soft-gravity_tightening_soft_rope/gravity_tightening_soft_rope_0086_appearance_05.mp4",
+        "poster": "videos/transfer/soft-gravity_tightening_soft_rope/gravity_tightening_soft_rope_0086_appearance_05.jpg",
+        "filename": "gravity_tightening_soft_rope_0086_appearance_05.mp4"
+      }
+    ]
+  },
+  {
+    "id": "fluid-draining_tank",
+    "label": "Draining tank",
+    "videos": [
+      {
+        "src": "videos/transfer/fluid-draining_tank/draining_tank_0010_appearance_02.mp4",
+        "poster": "videos/transfer/fluid-draining_tank/draining_tank_0010_appearance_02.jpg",
+        "filename": "draining_tank_0010_appearance_02.mp4"
+      },
+      {
+        "src": "videos/transfer/fluid-draining_tank/draining_tank_0013_appearance_05.mp4",
+        "poster": "videos/transfer/fluid-draining_tank/draining_tank_0013_appearance_05.jpg",
+        "filename": "draining_tank_0013_appearance_05.mp4"
+      }
+    ]
+  }
+]

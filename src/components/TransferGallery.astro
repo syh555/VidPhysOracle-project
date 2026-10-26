@@ -1,0 +1,48 @@
+---
+import { Tabs, TabsList, TabsTrigger, TabsContent } from './starwind/tabs';
+import scenes from '../data/transition-transfer.json';
+const prefix = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<section class="transfer-gallery not-prose" aria-labelledby="transfer-videos">
+  <span id="raw-transfer-demo" aria-hidden="true"></span>
+  <h3 id="transfer-videos">Depth-Controlled Transfer</h3>
+  <p class="transfer-description">We use depth-conditioned appearance transfer to vary visual appearance while preserving scene structure and motion. We tested all scenario families and retained transferred videos only for the scenarios below, where the results were sufficiently consistent.</p>
+  <div class="transfer-panel">
+  <Tabs defaultValue={scenes[0].id}>
+    <TabsList aria-label="Appearance-transfer scenarios">
+      {scenes.map(scene => <TabsTrigger value={scene.id}>{scene.label}</TabsTrigger>)}
+    </TabsList>
+    {scenes.map(scene => (
+      <TabsContent value={scene.id}>
+        <div class="transfer-video-grid">
+          {scene.videos.map((video, index) => (
+            <figure>
+              <video
+                controls muted playsinline preload="none"
+                poster={`${prefix}/${video.poster}`}
+                aria-label={`${scene.label}, raw to transfer example ${index + 1}`}
+              >
+                <source src={`${prefix}/${video.src}`} type="video/mp4" />
+                <a href={`${prefix}/${video.src}`}>Download this video</a>
+              </video>
+
+            </figure>
+          ))}
+        </div>
+      </TabsContent>
+    ))}
+  </Tabs>
+  </div>
+</section>
+
+<style>
+  .transfer-gallery { margin-block: 3rem; }
+  .transfer-panel { max-width: 1280px; margin: 2rem auto 3rem; padding: 1.5rem; border-radius: .85rem; background: #f3f6f9; border: 1px solid #e4eaf0; }
+  .transfer-description { width: var(--actual-text-width); max-width: 100%; box-sizing: border-box; margin: 0 auto 1.5rem; font-size: inherit; line-height: inherit; }
+  h3 { font-size: 1.4rem; font-weight: 600; letter-spacing: -.02em; margin-bottom: .75rem; }
+  .transfer-video-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+  .transfer-video-grid figure { margin: 1rem 0 0; min-width: 0; }
+  video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #111827; border-radius: .5rem; }
+  @media (max-width: 640px) { .transfer-panel { padding: 1rem; } .transfer-video-grid { grid-template-columns: 1fr; } }
+</style>

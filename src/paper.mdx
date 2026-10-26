@@ -1,218 +1,167 @@
 ---
-# This title is used for the browser tab and the link-preview card (see the
-# "description" and "thumbnail" keys below). The title displayed at the top of
-# the page is set separately, on the <Header> component in the body.
-title: Academic Project Page Template
-
-# The color theme of the page. Defaults to "device" (the preference set in the user's brower or operating system). Setting this to "light" or "dark" will override the user's preference. This is useful if your figures only look good in one theme.
-theme: device
-
-# This is the icon that appears in the user's browser tab. To customize, change the favicon.svg file in /public/, or add your own file to /public/ and change the filename here.
+title: 'VidPhysOracle: Benchmarking Video World Models Against Physically Grounded Futures'
+theme: light
 favicon: favicon.svg
-
-# These keys are optional. If a link to your project page is in a Google search result, text message, or social media post, it will often appear as a "link preview card" based on its title, description, favicon, and thumbnail. After you publish your page, you can double check that these previews look right using [this tool](https://linkpreview.xyz/)
-description: Simple project page template for your research paper, built with Astro and Tailwind
-thumbnail: screenshot-light.png
+description: A simulation-grounded benchmark for physical prediction across rigid bodies, soft bodies, liquids, and gases. 960 controlled scenes, 12 scenario families, and seven evaluated video models.
 ---
 
-import Header from "./components/Header.astro";
-import Video from "./components/Video.astro";
-import HighlightedSection from "./components/HighlightedSection.astro";
-import SmallCaps from "./components/SmallCaps.astro";
-import Figure from "./components/Figure.astro";
-import Picture from "./components/Picture.astro";
-import ModelViewer from "./components/ModelViewer.astro"
-import TwoColumns from "./components/TwoColumns.astro";
-import YouTubeVideo from "./components/YouTubeVideo.astro";
-import Carousel from "./components/Carousel.astro";
-import CarouselSlide from "./components/CarouselSlide.astro";
-import Wide from "./components/Wide.astro";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/starwind/tabs";
-import { Comparison } from "./components/Comparison.tsx";
+import Header from './components/Header.astro';
+import DatasetStatistics from './components/DatasetStatistics.astro';
+import Leaderboard from './components/Leaderboard.astro';
+import TransferGallery from './components/TransferGallery.astro';
+import RawGallery from './components/RawGallery.astro';
+import Figure from './components/Figure.astro';
+import Picture from './components/Picture.astro';
+import Wide from './components/Wide.astro';
+import HighlightedSection from './components/HighlightedSection.astro';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/starwind/tabs';
+import overview from './assets/vidphysoracle/overview.png';
+import scenarios from './assets/vidphysoracle/scenarios.png';
 
-import outside from "./assets/outside.mp4";
-import dogsDiffc from "./assets/dogs-diffc.png"
-import dogsTrue from "./assets/dogs-true.png"
-import dogsMsillm from "@/assets/dogs-msillm.jpg"
+export const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 <Header
-  title="Academic Project Page Template"
-  conference="Conference Name"
+  title="VidPhysOracle: Benchmarking Video World Models Against Physically Grounded Futures"
   authors={[
-    {
-      name: "Roman Hauksson",
-      url: "https://roman.technology",
-      institution: "University of Texas at Dallas",
-      notes: ["*", "†"],
-    },
-    { name: "Author Two", institution: "Institution Two", notes: ["*", "†"] },
-    { name: "Author Three", institution: "Institution Three", notes: ["*"] },
-    { name: "Author Four", institution: "Institution Four" },
+    { name: 'Yihan Su', notes: ['1', '*'] },
+    { name: 'Yuhao Quan', notes: ['1', '*'] },
+    { name: 'Xiaoyu Xiao', notes: ['2', '*'] },
+    { name: 'Haoran Zhang', notes: ['1', '*'] },
+    { name: 'Xubo Yang', notes: ['1'] },
+    { name: 'Tao Huang', notes: ['1'] },
+    { name: 'Wei Li', notes: ['1'] },
   ]}
-  notes={[
-    { symbol: "*", text: "author note one" },
-    { symbol: "†", text: "author note two" },
+  institutions={[
+    { symbol: '1', text: 'Shanghai Jiao Tong University' },
+    { symbol: '2', text: "Xi'an University of Electronic Science and Technology" },
   ]}
+  notes={[{ symbol: '*', text: 'Equal contribution' }]}
   links={[
-    { name: "Paper", url: "https://github.com/RomanHauksson/academic-project-astro-template", icon: "ri:file-pdf-2-line" },
-    { name: "Code", url: "https://github.com/RomanHauksson/academic-project-astro-template", icon: "ri:github-line" },
-    { name: "arXiv", url: "https://github.com/RomanHauksson/academic-project-astro-template", icon: "academicons:arxiv" },
-    { name: "Slides", url: "https://github.com/RomanHauksson/academic-project-astro-template", icon: "ri:slideshow-2-line" },
+    { name: 'Paper(VidPhysOracle)', url: `${base}/papers/vidphysoracle.pdf`, icon: 'ri:file-pdf-2-line' },
+    { name: 'GitHub', icon: 'ri:github-fill' },
+    { name: 'Hugging Face', url: 'https://huggingface.co/VidPhysOracle', image: `${base}/icons/huggingface.svg` },
   ]}
->
-  {/*
-    Optionally place a cover image or video behind the header. Import the
-    asset (from src/assets/, so images are optimized) and pass it through the
-    "background" slot using the Picture or Video component:
+/>
 
-      <Picture slot="background" src={cover} alt="" />
-      <Video slot="background" src={outside} controls={false} />
-  */}
-  <Picture slot="background" src={dogsTrue} alt="" priority />
-</Header>
+
+**VidPhysOracle** is a simulation-grounded benchmark for evaluating the physical prediction capabilities of video world models. We construct controlled oracle futures across **12 scenario families** spanning rigid bodies, soft bodies, liquids, and gases. A hierarchical scene description enables systematic variation, while depth-controlled appearance transfer broadens visual diversity. Material-aware metrics compare generated motion, deformation, and flow against simulation references, supporting both physical evaluation and physics-aware model adaptation.
+
+<Wide>
+  <div className="overview-figure">
+  <Figure>
+    <Picture slot="figure" src={overview} alt="VidPhysOracle pipeline: object, entity, and scene DSLs create cross-material simulation references, appearance variants, and behavior-specific physical evaluation." priority />
+  </Figure>
+  </div>
+</Wide>
 
 <HighlightedSection>
 
 ## Abstract
 
-This is a template you can use to create a professional-looking, accessible, and performant project page for your research paper. [See the code for the template and instructions on how to use it yourself on GitHub](https://github.com/RomanHauksson/academic-project-astro-template). It's made with the [Astro web framework](https://astro.build/) and styled with [Tailwind](https://tailwindcss.com/). You write the content in [MDX](https://mdxjs.com/), which enables markdown formatting like **bold**, _italics_, and ~strikethrough~, as well as custom components like <SmallCaps>small caps.</SmallCaps>
+Recent video generation and world models can synthesize visually compelling futures, yet their ability to capture real-world physics remains unclear. Existing physics evaluations largely rely on hand-crafted rules or learned judges, requiring the evaluator to infer what should physically happen. We introduce **VidPhysOracle**, a benchmark and physically grounded video dataset that evaluates generated futures against oracle trajectories produced by physical simulation. Rather than asking whether a video merely looks physically plausible, VidPhysOracle measures how closely its dynamics match a known physical evolution. The dataset covers diverse rigid-body, deformable/soft-body, and fluid systems with controlled initial conditions and corresponding simulated futures. To reduce the simulation-to-real visual gap, we construct physics-preserving photorealistic videos through appearance transformation while retaining the underlying geometry and motion. We further introduce a reference-based unified physical consistency score to quantify dynamic agreement beyond pixel-level similarity, and benchmark seven representative open-source video and world models under identical initial conditions. Beyond evaluation, VidPhysOracle provides physically valid future trajectories for physics-aware fine-tuning and post-training, enabling existing video models to improve physical consistency. Overall, VidPhysOracle offers a unified framework for evaluating, diagnosing, and improving the physical capabilities of video world models.
 
 </HighlightedSection>
 
-## Visuals
-
-### Image
-
-Use the `Picture` component to display images. If you have a figure in PDF format, you can pass in its path as the `src` prop and it will be converted into a web-friendly image automatically.
-
-<Picture src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
-
-### Video
-
-<Video src={outside} />
-
-### Wide visual
-
-I constrained the maximum width of the text column to make sure it's readable even when the screen is wide. But images and other visuals should "break out" and take up more horizontal space: for this, try wrapping them in the `Wide` component.
-
 <Wide>
-  <Picture src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
+  <Leaderboard />
 </Wide>
 
-### Figure with caption
+## From visual plausibility to reference fidelity
 
-Wrap a visual in a `Figure` component to add a caption.
+An object can look realistic while bouncing at the wrong time. A convincing liquid stream can still spread in the wrong direction. VidPhysOracle makes the expected future explicit: a material-appropriate simulator produces an oracle rollout, and a video model predicts a continuation from the same initial observation.
 
-<Figure>
-  <Picture slot="figure" src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
-  <Fragment slot="caption">A photo of two dogs running side-by-side in shallow water, lossily compressed using the [DiffC algorithm](https://jeremyiv.github.io/diffc-project-page/).</Fragment>
-</Figure>
+- **Controlled physical futures.** Twelve scenario families cover motion, contact, deformation, flow, and cross-material interactions.
+- **Data for evaluation and adaptation.** Randomized scenes, simulation-derived annotations, and appearance variants support benchmarking and physics-aware fine-tuning.
+- **Measurements matched to the material.** Object motion, projected deformation, and evolving fluid support expose complementary prediction errors.
 
-### Comparison slider
+<h2 id="benchmark">A benchmark across four material regimes</h2>
 
-Use the `Comparison` component to compare two visuals with an interactive slider.
+<DatasetStatistics />
 
-<Comparison client:idle >
-  <Picture slot="itemOne" src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
-  <Picture slot="itemTwo" src={dogsTrue} alt="True photo of two dogs running side-by-side in shallow water" />
-</Comparison>
+<Wide>
+  <div className="scenario-overview-figure">
+  <Figure>
+    <Picture slot="figure" src={scenarios} alt="Twelve simulation examples: dominoes, falling and rolling objects, soft pad, cloth, rope, draining tank, water tank, U connector, flame heating, impact smoke, and smoke stack." />
+  </Figure>
+  </div>
+</Wide>
 
-### Tab panels
-
-Tab panels are a great way to display a labeled collection of related visuals without taking up too much space.
-
-<Tabs defaultValue="true">
-  <TabsList>
-    <TabsTrigger value="true">Ground truth</TabsTrigger>
-    <TabsTrigger value="diffc">DiffC (Flux-dev)</TabsTrigger>
-    <TabsTrigger value="msillm">MS-ILLM</TabsTrigger>
+<Tabs defaultValue="rigid" class="material-categories">
+  <TabsList aria-label="Material categories">
+    <TabsTrigger value="rigid">Rigid bodies</TabsTrigger>
+    <TabsTrigger value="soft">Soft bodies</TabsTrigger>
+    <TabsTrigger value="liquid">Liquids</TabsTrigger>
+    <TabsTrigger value="gas">Gases</TabsTrigger>
   </TabsList>
-  <TabsContent value="true">
-    <Picture
-      src={dogsTrue}
-      alt="True photo of two dogs running side-by-side in shallow water"
-    />
+  <TabsContent value="rigid">
+
+**Falling objects · Rolling objects · Dominoes**
+
+384 source scenes cover gravity, friction, collision, momentum conservation, and resting stability. Evaluation combines silhouette overlap, centroid displacement, foreground geometry, and surface-point motion, including rotation.
+
+
+<Wide>
+  <RawGallery material="Rigid bodies" />
+</Wide>
+
   </TabsContent>
-  <TabsContent value="diffc">
-    <Picture
-      src={dogsDiffc}
-      alt="Photo of two running dogs, lossily compressed using the DiffC algorithm"
-    />
+  <TabsContent value="soft">
+
+**Falling objects on a soft pad · Gravity-draping flag · Gravity-tightening rope**
+
+384 source scenes cover soft–rigid interaction, elastic recovery, damping, wrinkling, bending, and inextensibility. Geometry and projected deformation curves measure both the magnitude and timing of the response.
+
+
+<Wide>
+  <RawGallery material="Soft bodies" />
+</Wide>
+
   </TabsContent>
-  <TabsContent value="msillm">
-    <Picture
-      src={dogsMsillm}
-      alt="Photo of two running dogs, lossily compressed using MS-ILLM"
-    />
+  <TabsContent value="liquid">
+
+**Rigid objects in a water tank · Draining tank · U connector**
+
+96 source scenes cover buoyancy, free-surface evolution, advection, pressure, and liquid–solid interaction. Spatial occupancy and temporal support changes measure where fluid appears and how that support evolves.
+
+
+<Wide>
+  <RawGallery material="Liquids" />
+</Wide>
+
+  </TabsContent>
+  <TabsContent value="gas">
+
+**Smoke stack · Impact smoke dispersion · Flame heating**
+
+96 source scenes cover thermal convection, buoyancy, mixing, vortex dynamics, and gas–solid interaction. Opacity-derived reference regions enable visible-support evaluation; the metrics do not reconstruct physical density.
+
+
+<Wide>
+  <RawGallery material="Gases" />
+</Wide>
+
   </TabsContent>
 </Tabs>
 
-### Carousel
+<Wide>
+  <TransferGallery />
+</Wide>
 
-A carousel is another useful pattern for a collection of visuals that don't necessarily have meaningful labels.
+## Paper
 
-<Carousel>
-  <CarouselSlide>
-    <Picture src={dogsTrue} alt="True photo of two dogs running side-by-side in shallow water" />
-  </CarouselSlide>
-  <CarouselSlide>
-    <Picture src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
-  </CarouselSlide>
-  <CarouselSlide>
-    <Picture
-      src={dogsMsillm}
-      alt="Photo of two running dogs, lossily compressed using MS-ILLM"
-    />
-  </CarouselSlide>
-</Carousel>
+Read the full manuscript for solver configurations, scenario definitions, metric equations, inference settings, and adaptation details.
 
-## Two columns
+<a className="paper-download" href={`${base}/papers/vidphysoracle.pdf`}>Download the paper (PDF) ↗</a>
 
-Use the two columns component to display two columns of content. In this example, the first column contains a YouTube video embed and the second column contains an interactive 3D model viewer. By default, they display side by side, but if the screen is narrow enough (for example, on mobile), they're arranged vertically.
-
-<TwoColumns>
-  <YouTubeVideo slot="left" videoId="wjZofJX0v4M" />
-  <ModelViewer slot="right" src="/BoxVertexColors.glb" alt="A cube colored with a rainbow gradient" />
-</TwoColumns>
-
-## $\LaTeX$
-
-You can also add $\LaTeX$ formulas, rendered during the build process using [$\KaTeX$](https://katex.org/) so they're quick to load for visitors of your project page. You can write them inline, like this: $a^2 + b^2 = c^2$. Or, you can write them as a block:
-
-$$
-\int_a^b f(x) dx
-$$
-
-## Citation
-
-If you copy your bibliography into `./bibliography.bib`, you can cite papers using their BibTeX keys, and they'll be automatically formatted and included in the bibliography section at the end. For example: [@vaswani2017attention]. Note that these citations are distinct from footnotes[^mynote], which show up in a separate section if you use them.
-
-[^mynote]: On the web, they should really be called "endnotes", since each page constitutes a full document.
-
-## Table
-
-Add simple tables using [GitHub Flavored Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables):
-
-| Model | Accuracy | F1 score | Training time (hours) |
-| :--- | :---: | :---: | :---: |
-| BERT-base | 0.89 | 0.87 | 4.5 |
-| RoBERTa-large | 0.92 | 0.91 | 7.2 |
-| DistilBERT | 0.86 | 0.84 | 2.1 |
-| XLNet | 0.90 | 0.89 | 6.8 |
-
-## BibTeX citation
-
-Displaying the BibTeX entry for your paper in a code block makes it easy to copy and paste.
+<details>
+  <summary>Citation for this anonymous manuscript</summary>
 
 ```bibtex
-@misc{roman2024academic,
-  author = "{Roman Hauksson}",
-  title = "Academic Project Page Template",
-  year = "2024",
-  howpublished = "\url{https://research-template.roman.technology}",
+@unpublished{vidphysoracle,
+  title = {VidPhysOracle: Benchmarking Video World Models Against Physically Grounded Futures},
+  author = {Anonymous Authors},
+  note = {Under review at ICLR 2027}
 }
 ```
 
-## Bibliography
-
-[^ref]
+</details>
